@@ -7,7 +7,7 @@
 ?>
 
     <div id="div-container"><?php
-      foreach ($list_color as $key_color) { ?>
+      foreach ($list_orange as $key_color => $value_description) { ?>
         <div class="div-container-color" style="background: <?php echo $key_color; ?>">
           <div class="div-color_descriptions">
             <p style="color: #fff;"><?php echo $key_color; ?></p>
@@ -20,7 +20,7 @@
       } ?>
     </div>
 
-<?php /*    <div id="div-container"><?php
+ <div id="div-container"><?php
       foreach ($list_blue as $key_color => $value_description) { ?>
         <div class="div-container-color" style="background: <?php echo $key_color; ?>">
           <div class="div-color_descriptions">
@@ -47,8 +47,6 @@
         </div><?php
       } ?>
     </div>
-
-    */ ?>
 
   </body>
 </html>
