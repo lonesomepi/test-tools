@@ -1,58 +1,54 @@
-#663200 brown
-#835300 brown_light
-#c2520a orange_dark
-#dc661e orange_medium
-#f45a1e orange
-#f37020 orange_light_1
-#f6821f orange_light_2
-#ff9f0d orange_light_3
-#ff9f0d yellow
+<?php
+  $this_root = "../";
+  $this_page = "colors";
+  include $this_root . 'include/header.php';
+  include $this_root . 'include/functions.php';
+  include 'include/list-color.php';
+?>
 
-#012346 blue_dark_3
-#01337a blue_dark_2
-#014083 blue_dark_1
-#00529b blue_medium
-#1670d0 blue
-#347ab6 blue_light
-#00a4a6 green_dark
-#aadcdb green_light
-#b9e986 green_medium
+    <div id="div-container"><?php
+      foreach ($list_color as $key_color) { ?>
+        <div class="div-container-color" style="background: <?php echo $key_color; ?>">
+          <div class="div-color_descriptions">
+            <p style="color: #fff;"><?php echo $key_color; ?></p>
+            <p style="color: #1a1a1a;"><?php echo $key_color; ?></p>
+          </div><?php
+          foreach ($list_color as $key_color_font) { ?>
+            <p style="color: <?php echo $key_color_font; ?>"><?php echo $key_color_font; ?></p><?php
+          } ?>
+        </div><?php
+      } ?>
+    </div>
 
-#414141 gray_dark
-#685546 brown_dark
+<?php /*    <div id="div-container"><?php
+      foreach ($list_blue as $key_color => $value_description) { ?>
+        <div class="div-container-color" style="background: <?php echo $key_color; ?>">
+          <div class="div-color_descriptions">
+            <p style="color: #fff;"><?php echo $key_color; ?></p>
+            <p style="color: #1a1a1a;"><?php echo $key_color; ?></p>
+          </div><?php
+          foreach ($list_color as $key_color_font) { ?>
+            <p style="color: <?php echo $key_color_font; ?>"><?php echo $key_color_font; ?></p><?php
+          } ?>
+        </div><?php
+      } ?>
+    </div>
 
+    <div id="div-container"><?php
+      foreach ($list_gray as $key_color => $value_description) { ?>
+        <div class="div-container-color" style="background: <?php echo $key_color; ?>">
+          <div class="div-color_descriptions">
+            <p style="color: #fff;"><?php echo $key_color; ?></p>
+            <p style="color: #1a1a1a;"><?php echo $key_color; ?></p>
+          </div><?php
+          foreach ($list_color as $key_color_font) { ?>
+            <p style="color: <?php echo $key_color_font; ?>"><?php echo $key_color_font; ?></p><?php
+          } ?>
+        </div><?php
+      } ?>
+    </div>
 
-85546 brown_dar
+    */ ?>
 
-
-
-git branch -c <feature>
-  git checkout <feature>
-
-
-
-    [4:28 PM] Williams, Brent
-    git push -u <feature> <feature>
-
-
-                                 ~/acatalano2
-
-                                 - local machine
-
-                                     push to
-
-                                 - test-tools  (github / alex)
-
-
-                                - ls-web-mgmt/test-tools (root / ssh / command prompt)
-
-                                - rsync -avr ./tools /web-share-nfs/content/ --dry-run
-
-
-                                  (World Wide Web)
-
-
-
-
-
-  rsync -avr /web-share-nfs/content/sistes/alex/* /home/acatalano2/test-tools/tools/
+  </body>
+</html>
